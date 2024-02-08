@@ -1,0 +1,29 @@
+// In this scss you can overwrite all our scss, we suggested you to add your scss into this, so whenever the update comes it will not affect your code.
+
+.error {
+    color: #ed4014 !important;
+}
+
+.warning {
+    color: #ff9900 !important;
+}
+
+.success {
+    color: #19be6b !important;
+}
+
+//#ed4014
+.pink-row {
+    background-color: #ffffff !important;
+    color: #ed4014;
+}
+
+//#ccf0b6
+.green-row {
+    background-color: #ffffff !important;
+}
+
+@import "../../../node_modules/primevue/resources/primevue.css";
+@import "./theme.css";
+@import "../../../node_modules/primeflex/primeflex.css";
+@import "../../../node_modules/primeicons/primeicons.css";
