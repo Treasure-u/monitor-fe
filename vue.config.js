@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
-const name = "Basic Data Platform"; // page title
+const name = "Basic Data PlatForm"; // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -39,7 +39,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       "^/api": {
-        target: process.env.VUE_APP_VITE_ENV === "XZ01" ? "http://xz01:10000" : "http://ft11:10000",
+        target: "http://xz07:10000",
         changeOrigin: true,
         secure: false,
         logLevel: "debug",

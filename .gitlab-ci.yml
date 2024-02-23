@@ -1,0 +1,36 @@
+stages:
+  - build_and_deploy
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - node_modules
+    - .npm
+
+before_script:
+  - export PATH=/home/z/local/node/bin/:$PATH
+  - node --version
+
+xz07_build_and_deploy:
+  stage: build_and_deploy
+  tags:
+    - xz07_rc03
+  script:
+    - npm config set registry https://registry.npm.taobao.org
+    - npm config get
+    - nice -n 19 pnpm i --cache=.npm
+    - nice -n 19 npx vue-demi-fix
+    - nice -n 19 npm run build
+    - mkdir -p $HOME/projects/hfrc/basic-data-platform-fe
+    - rm -rf $HOME/projects/hfrc/basic-data-platform-fe/*
+    - cp -r dist/* $HOME/projects/hfrc/basic-data-platform-fe/
+  artifacts:
+    name: "$CI_RUNNER_ID"
+    expire_in: 1 week
+    paths:
+      - dist
+  
+
+
+
+

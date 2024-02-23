@@ -12,7 +12,7 @@ const router = new Router({
       path: "/",
       redirect: () => {
         return {
-          name: 'ConnectionPage'
+          name: 'FutAndIndexPage'
         }
       },
       component: () => import("@/layouts/FullLayout"),
@@ -22,14 +22,23 @@ const router = new Router({
           path: "/connection",
           component: () => import("@/views/ConnectionPage"),
         },
-
+        {
+          name: "FutAndIndexPage",
+          path: "/fut_and_index_price",
+          component: () => import("@/views/depth/FutAndIndexPage"),
+        },
+        {
+          name: "FutAndIndexGridPage",
+          path: "/fut_and_index",
+          component: () => import("@/views/depth/FutAndIndexGridPage"),
+        },
       ],
     },
     {
       path: "*",
       redirect: () => {
         return {
-          name: 'ConnectionPage'
+          name: 'FutAndIndexPage'
         }
       },
     },
