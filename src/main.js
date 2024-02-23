@@ -6,7 +6,7 @@ import "./plugins/utils";
 import "./plugins/http-client";
 import "./plugins/vxe-table";
 
-// import "./plugins/echarts";
+import "./plugins/echarts";
 import "./assets/scss/style.scss";
 
 import 'view-design/dist/styles/iview.css';

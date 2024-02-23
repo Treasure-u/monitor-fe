@@ -59,13 +59,16 @@
           <!-- ============================================================== -->
 
           <Menu mode="horizontal" theme="dark" :active-name="active_name">
-            <MenuItem name="ConnectionPage" :to="{ name: 'ConnectionPage' }">
+            <MenuItem name="ConnectionPage" :to="{ name: 'FutAndIndexPage' }">
               <Icon type="md-timer" />
-              view1
+              历史价格曲线（测试中）
             </MenuItem>
-            <MenuItem name="ConnectionPage" :to="{ name: 'ConnectionPage' }">
+            <MenuItem
+              name="FutAndIndexGridPage"
+              :to="{ name: 'FutAndIndexGridPage' }"
+            >
               <Icon type="md-trending-up" />
-              view2
+              指数&期货实时价格（测试中）
             </MenuItem>
           </Menu>
           <!-- ============================================================== -->
